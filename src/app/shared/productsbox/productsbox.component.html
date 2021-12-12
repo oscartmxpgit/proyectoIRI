@@ -1,6 +1,6 @@
 
 <div class="container productsbox-container">
-    <h3>{{product.name}}</h3>
+    <h3><a routerLink="/products/{{product.id}}"> {{product.name}}</a></h3>
     <p>{{product.description}}</p>
     <button (click)="addProductToCart()" type="button" class="btn btn-primary btn-lg">Comprar {{product.price | currency: 'EUR'}}</button>
 

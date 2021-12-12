@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { ProductsboxComponent } from './shared/productsbox/productsbox.component';
 import { CartComponent } from './shared/cart/cart.component';
 import { CartService } from './shared/cartService/cart.service';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './shared/productService/product.service';
+import { CheckoutComponent } from './shared/checkout/checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,21 @@ import { CartService } from './shared/cartService/cart.service';
     FooterComponent,
     HomeComponent,
     ProductsboxComponent,
-    CartComponent
+    CartComponent,
+    ProductComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   //Aquí van los servicios
-  providers: [CartService],
+  providers: [
+    CartService,
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

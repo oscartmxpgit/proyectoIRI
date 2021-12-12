@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>{{product.name}}</h1>
+     </div>
+    <div class="row">
+      <div class="col">
+        {{product.description}}
+     </div>
+     <div class="row">
+      <div class="col">
+        {{product.price | currency: 'EUR'}}
+        <br />
+        <button (click)='addToCart()' class="btn btn-primary">Añadir al carrito!</button>
+     </div>
+     </div>
+    </div>
+   </div>
+</div>
